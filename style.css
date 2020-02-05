@@ -1,0 +1,182 @@
+
+
+.logo {
+ box-shadow:4px 4px 10px black;
+border-radius: 50px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+  opacity: 10;
+  animation: logoFade 2000ms forwards;
+}
+
+.bounce {
+      position:fixed;
+      left:50%;
+      bottom:0;
+      margin-top:-25px;
+      margin-left:-25px;
+      height:50px;
+      width:50px;
+    
+      -webkit-animation:bounce 5s infinite;
+    }
+    
+    @-webkit-keyframes bounce {
+      0%       { bottom:5px; }
+      25%, 75% { bottom:15px; }
+      50%      { bottom:20px; }
+      100%     {bottom:0;}
+    }
+
+    .info {
+  opacity: 100;
+  animation: textFade 3000ms 1900ms forwards;
+}
+
+@keyframes logoFade {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+.video-container {
+position: relative;
+padding-top: inherit; height: 0px; overflow: hidden;
+padding-bottom: 56.25%;
+
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.twitter-timeline
+{
+  position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.coded-on-replit {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-flex;
+  padding: 8px 12px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(17, 29, 44);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.coded-on-replit img {
+  width: 20px;
+  margin-right: 4px;
+  height: auto;
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(34, 34, 34);
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
