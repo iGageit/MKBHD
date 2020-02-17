@@ -208,15 +208,16 @@ color: white;
 
 }
 .video-responsive {
-  text-align: center;
+  text-align: left;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1560px) {
   .video-responsive {
     overflow: hidden;
     padding-bottom: 56.25%;
     position: relative;
     height: 0;
+    text-align: center;
   }
   .video-responsive iframe {
     left: 0;
