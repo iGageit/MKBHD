@@ -55,10 +55,13 @@ position: relative;
 padding-top: inherit; height: 0px;  overflow: hidden; align-items: center;
 padding-bottom: 56.25%;
 display: flex;
-flex-direction: column;
 
 
 }
+
+
+
+
  
 .video-container iframe,
 .video-container object,
@@ -167,7 +170,7 @@ padding-top: 30px; height: 0; overflow: hidden;
 
 .logotextcolor {
 color: white;
-
+text-align: left;
 }
 
 .footer { 
@@ -197,4 +200,29 @@ color: white;
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.1); 
+}
+
+.maintext {
+color: white;
+ text-align: center;
+
+}
+.video-responsive {
+  text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 }
