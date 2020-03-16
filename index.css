@@ -43,15 +43,15 @@
 }
 
 .topnav a.active {
-  background-color: darkred;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 .topnav .icon {
   display: none;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 500px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
