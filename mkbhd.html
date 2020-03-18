@@ -152,7 +152,60 @@ amzn_assoc_linkid = "588622a535b73ab5bed3df66ebd4553a";
 <!-- Follow on Youtube -->
 <div class="g-ytsubscribe" data-channel="marquesbrownlee" data-layout="full" data-theme="dark" data-count="default"></div>
 <!-- Youtube Link -->
-<div class="video-responsive" ><iframe width="1280" height="720" src="https://www.youtube.com/embed?listType=user_uploads&list=marquesbrownlee" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "  frameborder="0"  allowfullscreen ></iframe> 
+<div class="video-responsive">
+<!--https://codegena.com/auto-embed-latest-video-youtube-channel/-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ 
+<iframe class="latestVideoEmbed" vnum='0' cid="UCBJycsmduvYEL83R_U4JriQ" width="1280" height="720" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "></iframe>
+
+<script>
+var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+function loadVideo(iframe){
+    $.getJSON( reqURL + iframe.getAttribute('cid'),
+      function(data) {
+         var videoNumber = (iframe.getAttribute('vnum')?Number(iframe.getAttribute('vnum')):0);
+        console.log(videoNumber);
+         var link = data.items[videoNumber].link;
+         id = link.substr(link.indexOf("=") + 1);  
+         iframe.setAttribute("src","https://youtube.com/embed/"+id + "?controls=0&autoplay=1");
+      }
+   );
+}
+var iframes = document.getElementsByClassName('latestVideoEmbed');
+for (var i = 0, len = iframes.length; i < len; i++){
+       loadVideo(iframes[i]);
+}
+</script>
+</div>
+</div>
+</div>
+</br>
+<!--Youtube Video 2 -->
+<div class="video-responsive">
+<!--https://codegena.com/auto-embed-latest-video-youtube-channel/-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ 
+<iframe class="latestVideoEmbed" vnum='1' cid="UCBJycsmduvYEL83R_U4JriQ" width="1280" height="720" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "></iframe>
+
+<script>
+var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+function loadVideo(iframe){
+    $.getJSON( reqURL + iframe.getAttribute('cid'),
+      function(data) {
+         var videoNumber = (iframe.getAttribute('vnum')?Number(iframe.getAttribute('vnum')):0);
+        console.log(videoNumber);
+         var link = data.items[videoNumber].link;
+         id = link.substr(link.indexOf("=") + 1);  
+         iframe.setAttribute("src","https://youtube.com/embed/"+id + "?controls=0&autoplay=1");
+      }
+   );
+}
+var iframes = document.getElementsByClassName('latestVideoEmbed');
+for (var i = 0, len = iframes.length; i < len; i++){
+       loadVideo(iframes[i]);
+}
+</script>
+</div>
 </div>
 </div>
 
@@ -172,14 +225,14 @@ amzn_assoc_linkid = "588622a535b73ab5bed3df66ebd4553a";
 <!-- Twitter feed -->
 <a class="twitter-timeline"
       href="https://twitter.com/MKBHD"
-      data-tweet-limit="4">
+      data-tweet-limit="6">
 Tweets by @twittername</a>
 <meta http-equiv="refresh" content="3600">
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 <hr>
-<!-- amazon ad -->
+
 <!-- Amazon Ad -->
 <center>
 
